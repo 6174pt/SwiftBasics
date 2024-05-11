@@ -43,3 +43,26 @@ mentor.hello() // コンソールに"私はttです"と出力される
 
 
 // 11.5 11.4で定義したMentorクラスにfistName, lastName, memberName, course,mentorを受け取るinitの関数を実装してください
+
+class Member {
+    var firstName: String = ""
+    var lastName: String = ""
+    var memberName: String = ""
+    var course: String = ""
+    var mentor: String = ""
+    
+    init(firstName: String, lastName: String, memberName: String, course: String, mentor: String){
+        self.firstName = firstName
+        self.lastName = lastName
+        self.memberName = memberName
+        self.course = course
+        self.mentor = mentor
+    }
+    
+    func hello(){
+        print("私は\(memberName)です")
+    }
+}
+
+let member = Member(firstName: "Hajime", lastName: "Tanaka", memberName: "tt", course: "WebS", mentor: "tt")
+member.hello()
